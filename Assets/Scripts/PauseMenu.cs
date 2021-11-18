@@ -10,11 +10,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            PauseGame();
+            TogglePause();
         }
     }
 
-    public void PauseGame()
+    public void TogglePause()
     {
         gameManager.pauseMenuUI.SetActive(!gameManager.pauseMenuUI.activeSelf);
 
@@ -32,6 +32,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        TogglePause();
         sceneFader.FadeTo(levelToLoad);
     }
 }
