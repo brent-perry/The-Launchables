@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    GameManager gameManager;
+    public static int Ammo;
+    public int startAmmo = 3;
     Rigidbody2D _rigidbody2D;
     SpriteRenderer _spriteRenderer;
     LineRenderer _lineRenderer;
@@ -21,6 +24,8 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        Ammo = startAmmo;
         _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true; //prevents player object from moving
     }
@@ -58,7 +63,7 @@ public class Player : MonoBehaviour
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 desiredPosition = mousePosition;
-        
+
         float distance = Vector2.Distance(desiredPosition, _startPosition);
         if (distance > _maxDragDistance)
         {
@@ -88,9 +93,15 @@ public class Player : MonoBehaviour
 
     IEnumerator ResetAfterDelay()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
+        AmmoCounter();
+    }
+
+    void AmmoCounter()
+    {
+        Ammo--;
     }
 }

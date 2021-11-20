@@ -1,17 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
     public SceneFader sceneFader;
-    public string levelToLoad = "LevelSelect";
+    public string mainMenu = "MainMenu";
 
-    public void Restart()
+    public void Retry()
     {
-        sceneFader.FadeTo(levelToLoad);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
-        Debug.Log("Go To Menu");
+        sceneFader.FadeTo(mainMenu);
     }
 }

@@ -4,26 +4,42 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    bool gameEnded = false;
+    bool lossLevel = false;
+    bool wonLevel = false;
+    public SceneFader sceneFader;
+    public string levelSelect = "LevelSelect";
     public GameObject gameOverUI;
+    public GameObject nextLevelUI;
     public GameObject pauseMenuUI;
+    public Enemy[] enemies;
 
     void Update()
     {
-        if (gameEnded)
+        if (PlayerController.Ammo <= 0 && !wonLevel)
+        {
+            EndGame();
+        }
+        if (lossLevel || wonLevel)
         {
             return;
         }
-        //if you run out of ammo for the birds then game over
-        // if()
-        // {
-        //     EndGame();
-        // }
     }
 
-    void EndGame()
+    public void EndGame()
     {
-        gameEnded = true;
         gameOverUI.SetActive(true);
+        lossLevel = true;
+    }
+
+    public void NextLevelOverlay()
+    {
+        Debug.Log("meow");
+        wonLevel = true;
+        nextLevelUI.SetActive(true);
+    }
+
+    public void NextLevel()
+    {
+        sceneFader.FadeTo(levelSelect);
     }
 }

@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField] string _nextLevelName;
+    GameManager gameManager;
     Enemy[] _enemies;
+
+    void Start() 
+    {
+        gameManager = GetComponent<GameManager>();
+    }
     void OnEnable()
     {
         _enemies = FindObjectsOfType<Enemy>();
@@ -16,13 +21,8 @@ public class LevelController : MonoBehaviour
     {
         if (EnemiesAreAllDead())
         {
-            GoToNextLevel();
+            gameManager.NextLevelOverlay();
         }
-    }
-
-    void GoToNextLevel()
-    {
-        SceneManager.LoadScene(_nextLevelName);
     }
 
     bool EnemiesAreAllDead()
@@ -38,4 +38,7 @@ public class LevelController : MonoBehaviour
         return true;
 
     }
+
+
+
 }
