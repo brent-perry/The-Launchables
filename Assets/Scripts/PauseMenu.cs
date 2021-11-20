@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public string levelToLoad = "LevelSelect";
     public GameManager gameManager;
     public SceneFader sceneFader;
+    public string mainMenu = "MainMenu";
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -27,12 +27,16 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-
     
-
-    public void Restart()
+    public void Retry()
     {
         TogglePause();
-        sceneFader.FadeTo(levelToLoad);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+    }
+
+    public void Menu()
+    {
+        TogglePause();
+        sceneFader.FadeTo(mainMenu);
     }
 }

@@ -5,8 +5,8 @@ public class Enemy : MonoBehaviour
 
     // [SerializeField] ParticleSystem _particleSystem;
     // [SerializeField] Sprite _deadEnemy;
-
     bool _hasDied;
+   
     void OnCollisionEnter2D(Collision2D other)
     {
         //checks if player is in level and then if collides with anything
@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Die());
         }
 
-        Player player = other.gameObject.GetComponent<Player>();
+        PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
         Enemy enemy = other.collider.GetComponent<Enemy>();
         //checks if collides with other enemies and does nothing
         if (enemy != null)
@@ -30,8 +30,8 @@ public class Enemy : MonoBehaviour
                 return false;
             }
 
-            Player player = collision.gameObject.GetComponent<Player>();
-            if (player != null)
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            if (playerController != null)
             {
                 return true;
             }
