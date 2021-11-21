@@ -6,16 +6,16 @@ public class GameManager : MonoBehaviour
 {
     bool lossLevel = false;
     bool wonLevel = false;
+    
     public SceneFader sceneFader;
     public string levelSelect = "LevelSelect";
     public GameObject gameOverUI;
-    public GameObject nextLevelUI;
+    public GameObject completedLevelUI;
     public GameObject pauseMenuUI;
-    public Enemy[] enemies;
 
     void Update()
     {
-        if (PlayerController.Ammo <= 0 && !wonLevel)
+        if (PlayerStats.Ammo <= 0 && !wonLevel)
         {
             EndGame();
         }
@@ -31,15 +31,9 @@ public class GameManager : MonoBehaviour
         lossLevel = true;
     }
 
-    public void NextLevelOverlay()
+    public void WinLevel()
     {
-        Debug.Log("meow");
         wonLevel = true;
-        nextLevelUI.SetActive(true);
-    }
-
-    public void NextLevel()
-    {
-        sceneFader.FadeTo(levelSelect);
+        completedLevelUI.SetActive(true);
     }
 }

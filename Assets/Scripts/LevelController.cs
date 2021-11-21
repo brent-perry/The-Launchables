@@ -21,7 +21,7 @@ public class LevelController : MonoBehaviour
     {
         if (EnemiesAreAllDead())
         {
-            gameManager.NextLevelOverlay();
+            gameManager.WinLevel();
         }
     }
 
