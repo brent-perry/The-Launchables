@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dd1e1dc4efaee40adc8a9679f35f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneFader: {fileID: 4399587434788523399, guid: 895b3846ae467f84c9881072515e2809, type: 3}
   levelToLoad: LevelSelect
-  sceneFader: {fileID: 0}

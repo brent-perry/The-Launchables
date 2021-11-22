@@ -3,7 +3,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public SceneFader sceneFader;
-    public string levelToLoad = "LevelSelect";
+    string levelToLoad = "CharacterSelect";
 
     public void Play()
     {
