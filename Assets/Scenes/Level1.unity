@@ -345,63 +345,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &592091071
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2892875024949506700, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_Name
-      value: Level Controller
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892875024949506702, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bb68b80e34bb5f54f8d8e17c3cffba08, type: 3}
 --- !u!4 &771636877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1847316173995386228, guid: aeadd6e58a6e2a745b95bf619e33af5c, type: 3}
@@ -531,6 +474,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7871440791270518051, guid: b6f16ff33a77acf47b1890341befe420, type: 3}
   m_PrefabInstance: {fileID: 830560959}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &887467641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 772.85016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 506.36356
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.94839
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995493, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377479290207995515, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
 --- !u!1001 &1152657031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -781,6 +781,10 @@ PrefabInstance:
     - target: {fileID: 1847316173995386225, guid: aeadd6e58a6e2a745b95bf619e33af5c, type: 3}
       propertyPath: m_Name
       value: White Blue Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847316173995386225, guid: aeadd6e58a6e2a745b95bf619e33af5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1847316173995386228, guid: aeadd6e58a6e2a745b95bf619e33af5c, type: 3}
       propertyPath: m_RootOrder
