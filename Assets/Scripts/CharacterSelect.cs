@@ -3,9 +3,9 @@ using UnityEngine;
 public class CharacterSelect : MonoBehaviour
 {
    public GameObject[] characters;
-   public static int selectedCharacter = 0;
+   static int selectedCharacter = 0;
    public SceneFader sceneFader;
-
+   
    public void NextCharacter()
    {
        characters[selectedCharacter].SetActive(false);

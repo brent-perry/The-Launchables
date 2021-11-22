@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     public GameManager gameManager;
     public SceneFader sceneFader;
     public string mainMenu = "MainMenu";
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
