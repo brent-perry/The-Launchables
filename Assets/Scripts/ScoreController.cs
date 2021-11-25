@@ -5,30 +5,17 @@ using TMPro;
 
 public class ScoreController : MonoBehaviour
 {
-    public TextMeshProUGUI _scoreText;
+    public static int Score;
+    public int startScore = 0;
 
     void Start()
     {
-        _scoreText = FindObjectOfType<TextMeshProUGUI>();
+        Score = startScore;
     }
 
-    private void OnEnable()
+    public void ScoreCounter()
     {
-        // StartCoroutine(AnimateText());
+        Score++;
     }
-
-//     IEnumerator AnimateText()
-//     {
-//         _scoreText.text = "0";
-//         int score = 0;
-
-//         yield return new WaitForSeconds(.7f);
-
-//         while (score < PlayerController.Score)
-//         {
-//             score++;
-//             _scoreText.text = PlayerController.Score.ToString();
-//             yield return new WaitForSeconds(.05f);
-//         }
-//     }
 }
+

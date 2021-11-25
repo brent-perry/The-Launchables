@@ -3,15 +3,15 @@ using TMPro;
 
 public class ScoreUI : MonoBehaviour
 {
-    TextMeshProUGUI _scoreValueText;
+    public TextMeshProUGUI scoreValueText;
 
     void Start()
     {
-        _scoreValueText = FindObjectOfType<TextMeshProUGUI>();
+        scoreValueText = FindObjectOfType<TextMeshProUGUI>();
     }
 
     void Update()
     {
-        _scoreValueText.text = $"{PlayerStats.Score}";
+        scoreValueText.text = $"{ScoreController.Score}";
     }
 }

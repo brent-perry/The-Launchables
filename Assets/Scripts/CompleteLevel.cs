@@ -5,8 +5,8 @@ using UnityEngine;
 public class CompleteLevel : MonoBehaviour
 {
     public string mainMenu = "MainMenu";
-    public string nextLevel = "Level2";
-    public int levelToUnlock = 2;
+    public string nextLevel;
+    public int levelToUnlock ;
     public SceneFader sceneFader;
 
     public void Continue()
