@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     GameManager gameManager;
-    PlayerStats playerStats;
-    
+    AmmoController ammoController;
     Rigidbody2D _rigidbody2D;
     SpriteRenderer _spriteRenderer;
     LineRenderer _lineRenderer;
@@ -25,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        playerStats = FindObjectOfType<PlayerStats>();
+        ammoController = FindObjectOfType<AmmoController>();
         _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true; //prevents player object from moving
     }
@@ -97,8 +96,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
-        playerStats.AmmoCounter();
-        playerStats.ScoreCounter();
+        ammoController.AmmoCounter();
     }
 
     

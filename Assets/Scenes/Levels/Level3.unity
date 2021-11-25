@@ -202,9 +202,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 835753794}
     - target: {fileID: 1166882530940757144, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: nextLevel
+      value: Level4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166882530940757144, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 835753794}
+    - target: {fileID: 1166882530940757144, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: levelToUnlock
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2046350059112719211, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
       propertyPath: sceneFader
       value: 
@@ -711,7 +719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4399587434788523398, guid: 895b3846ae467f84c9881072515e2809, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895b3846ae467f84c9881072515e2809, type: 3}

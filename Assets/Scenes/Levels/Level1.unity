@@ -202,6 +202,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 835753794}
     - target: {fileID: 1166882530940757144, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
+      propertyPath: nextLevel
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166882530940757144, guid: e9f35119b8d32144db2925c9668fd13e, type: 3}
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 835753794}
@@ -711,7 +715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4399587434788523398, guid: 895b3846ae467f84c9881072515e2809, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895b3846ae467f84c9881072515e2809, type: 3}
@@ -1212,7 +1216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3396098198213037058, guid: 4a0e5ade5c25cb0478172758fbc57482, type: 3}
       propertyPath: orthographic size
-      value: 10.239274
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3396098198213037061, guid: 4a0e5ade5c25cb0478172758fbc57482, type: 3}
       propertyPath: m_LocalPosition.x

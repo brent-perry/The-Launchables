@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (PlayerStats.Ammo <= 0 && !wonLevel)
+        if (AmmoController.Ammo <= 0 && !wonLevel)
         {
             EndGame();
         }
