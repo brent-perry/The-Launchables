@@ -1,24 +1,37 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterSelect : MonoBehaviour
 {
-    public GameObject[] characters;
-    static int selectedCharacter = 0;
     SceneFader _sceneFader;
+    Button _nextCharacter, _previousCharacter, _selectCharacter;
+    public GameObject[] characters;
+    public static int selectedCharacter = 0;
+
+    void Awake()
+    {
+        _sceneFader = FindObjectOfType<SceneFader>();
+
+        _nextCharacter = GameObject.FindGameObjectWithTag("NextCharacterButton").GetComponent<Button>();
+        _previousCharacter = GameObject.FindGameObjectWithTag("PreviousCharacterButton").GetComponent<Button>();
+        _selectCharacter = GameObject.FindGameObjectWithTag("SelectCharacterButton").GetComponent<Button>();
+    }
 
     void Start()
     {
-         _sceneFader = FindObjectOfType<SceneFader>();
+        _nextCharacter.onClick.AddListener(NextCharacter);
+        _previousCharacter.onClick.AddListener(PreviousCharacter);
+        _selectCharacter.onClick.AddListener(SelectCharacter);
     }
 
-    public void NextCharacter()
+    void NextCharacter()
     {
         characters[selectedCharacter].SetActive(false);
         selectedCharacter = (selectedCharacter + 1) % characters.Length;
         characters[selectedCharacter].SetActive(true);
     }
 
-    public void PreviousCharacter()
+    void PreviousCharacter()
     {
         characters[selectedCharacter].SetActive(false);
         selectedCharacter--;
@@ -29,7 +42,7 @@ public class CharacterSelect : MonoBehaviour
         characters[selectedCharacter].SetActive(true);
     }
 
-    public void SelectCharacter()
+    void SelectCharacter()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         _sceneFader.FadeTo("LevelSelect");
