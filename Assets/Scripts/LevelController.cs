@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-
     CompleteLevel _completeLevel;
     Enemy[] _enemies;
 

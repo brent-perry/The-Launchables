@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6146372597572375250}
   - component: {fileID: 5412139420282087378}
   - component: {fileID: 4437010772167924938}
+  - component: {fileID: -1260832090749601648}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -53,8 +54,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fccc4f47856f9374fb1ddf806bb29cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
-  completedLevelUI: {fileID: 0}
 --- !u!114 &6146372598983233446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +120,7 @@ MonoBehaviour:
   - {fileID: 2040874301012591893, guid: f4dac736def8f1c41a906e71589dc7ed, type: 3}
   - {fileID: 7141499845280546456, guid: 743291a90045b3e479aa472da68f1368, type: 3}
   spawnPoint: {fileID: 6146372597691988418}
+  clone: {fileID: 0}
 --- !u!114 &6146372597572375253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c71399fd7d5dfe4486622c4879ab720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: MainMenu
   nextLevel: Level1
   levelToUnlock: 2
 --- !u!114 &6146372597572375251
@@ -148,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d659ac493a4d73f41bb9a32b1ee17238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScore: 0
 --- !u!114 &6146372597572375250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b498ff2763047542af8571315164164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoText: {fileID: 0}
 --- !u!114 &5412139420282087378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e77f5207d30d543bfb26ebd0f5a630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startAmmo: 3
 --- !u!114 &4437010772167924938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +183,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33b037d043eb6b44b3a09a501fe24a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValueText: {fileID: 0}
+--- !u!114 &-1260832090749601648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146372597572375248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7be5e510f1d40479ab36763945d36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6146372597691988417
 GameObject:
   m_ObjectHideFlags: 0

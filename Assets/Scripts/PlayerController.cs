@@ -30,11 +30,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-        LineRendererAimer();
-        if (transform.position.y < -8)//checks if bird falls off the map
-        {
-            ResetAfterDelay();
-        }
     }
 
     void OnMouseDown()
@@ -54,6 +49,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.isKinematic = false; //allows object to move again
         _rigidbody2D.AddForce(direction * _launchPower); //pushes object in opposite direction of the mouse multiplied by the _launchPower
         _lineRenderer.enabled = false; //removes the line renderer(arrows) upon release of mouse
+        _ammoController.AmmoCounter(); //removes 1 ammo
     }
 
     void OnMouseDrag()
@@ -94,7 +90,6 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
-        _ammoController.AmmoCounter();
     }
 
     
