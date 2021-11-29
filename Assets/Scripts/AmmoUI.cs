@@ -3,15 +3,15 @@ using TMPro;
 
 public class AmmoUI : MonoBehaviour
 {
-    public TextMeshProUGUI ammoText;
+    TextMeshProUGUI _ammoText;
 
     void Start()
     {
-        ammoText = FindObjectOfType<TextMeshProUGUI>();
+        _ammoText = GameObject.FindGameObjectWithTag("AmmoText").GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
     {
-        ammoText.text = $"Ammo: {AmmoController.Ammo}";
+        _ammoText.text = $"Ammo: {AmmoController.Ammo}";
     }
 }

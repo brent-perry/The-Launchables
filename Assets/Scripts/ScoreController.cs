@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreController : MonoBehaviour
 {
     public static int Score;
-    public int startScore = 0;
+    int startScore = 0;
 
     void Start()
     {

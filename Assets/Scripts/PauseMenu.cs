@@ -1,11 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameManager gameManager;
-    public SceneFader sceneFader;
-    public string mainMenu = "MainMenu";
+    SceneFader _sceneFader;
+    string mainMenu = "MainMenu";
+    Button _resumeButton, _retryButton, _menuButton;
+    GameObject _pauseOverlay;
+
+    void Awake()
+    {
+        _sceneFader = FindObjectOfType<SceneFader>();
+
+        _pauseOverlay = GameObject.FindGameObjectWithTag("PauseOverlay");
+
+        _resumeButton = GameObject.FindGameObjectWithTag("PauseResumeButton").GetComponent<Button>();
+        _retryButton = GameObject.FindGameObjectWithTag("PauseRetryButton").GetComponent<Button>();
+        _menuButton = GameObject.FindGameObjectWithTag("PauseMenuButton").GetComponent<Button>();
+    }
+
+    void Start()
+    {
+        _pauseOverlay.SetActive(false);
+
+        _resumeButton.onClick.AddListener(TogglePause);
+        _retryButton.onClick.AddListener(Retry);
+        _menuButton.onClick.AddListener(Menu);
+    }
 
     void Update()
     {
@@ -15,11 +37,11 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void TogglePause()
+    void TogglePause()
     {
-        gameManager.pauseMenuUI.SetActive(!gameManager.pauseMenuUI.activeSelf);
+        _pauseOverlay.SetActive(!_pauseOverlay.activeSelf);
 
-        if (gameManager.pauseMenuUI.activeSelf)
+        if (_pauseOverlay.activeSelf)
         {
             Time.timeScale = 0f;
         }
@@ -28,16 +50,16 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    
-    public void Retry()
+
+    void Retry()
     {
         TogglePause();
-        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+        _sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
-    public void Menu()
+    void Menu()
     {
         TogglePause();
-        sceneFader.FadeTo(mainMenu);
+        _sceneFader.FadeTo(mainMenu);
     }
 }
