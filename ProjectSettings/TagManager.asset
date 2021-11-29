@@ -6,6 +6,30 @@ TagManager:
   tags:
   - Undefined
   - DeathObstacles
+  - Characters
+  - ContinueButton
+  - RetryButton
+  - PlayButton
+  - QuitButton
+  - MenuButton
+  - NextLevelButton
+  - PauseToggleButton
+  - ResumeButton
+  - GameManager
+  - PauseOverlay
+  - CompletedLevelOverlay
+  - GameOverOverlay
+  - SpawnPoint
+  - CLMenuButton
+  - CLRetryButton
+  - CLContinueButton
+  - GORetryButton
+  - GOMenuButton
+  - PauseMenuButton
+  - PauseRetryButton
+  - PauseResumeButton
+  - AmmoText
+  - ScoreValueText
   layers:
   - Default
   - TransparentFX

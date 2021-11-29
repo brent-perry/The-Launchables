@@ -1,22 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CompleteLevel : MonoBehaviour
 {
-    public string mainMenu = "MainMenu";
+    GameObject _completedLevelOverlay;
+    SceneFader _sceneFader;
+    Button _retryButton, _menuButton, _continueButton;
+    string _mainMenu = "MainMenu";
     public string nextLevel;
-    public int levelToUnlock ;
-    public SceneFader sceneFader;
+    public int levelToUnlock;
+    bool _wonLevel = false;
 
-    public void Continue()
+    void Awake()
     {
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        sceneFader.FadeTo(nextLevel);
+        _sceneFader = FindObjectOfType<SceneFader>();
+
+        _completedLevelOverlay = GameObject.FindGameObjectWithTag("CompletedLevelOverlay");
+
+        _retryButton = _retryButton = GameObject.FindGameObjectWithTag("CLRetryButton").GetComponent<Button>();
+        _menuButton = GameObject.FindGameObjectWithTag("CLMenuButton").GetComponent<Button>();
+        _continueButton = GameObject.FindGameObjectWithTag("CLContinueButton").GetComponent<Button>();
     }
 
-    public void Menu()
+    void Start()
     {
-        sceneFader.FadeTo(mainMenu);
+        _completedLevelOverlay.SetActive(false);
+
+        _retryButton.onClick.AddListener(Retry);
+        _menuButton.onClick.AddListener(Menu);
+        _continueButton.onClick.AddListener(Continue);
+    }
+
+    void Continue()
+    {
+        PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        _sceneFader.FadeTo(nextLevel);
+    }
+
+    void Menu()
+    {
+        _sceneFader.FadeTo(_mainMenu);
+    }
+
+    void Retry()
+    {
+        _sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+    }
+
+    public void WinLevel()
+    {
+        _wonLevel = true;
+        _completedLevelOverlay.SetActive(true);
     }
 }

@@ -1,23 +1,31 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public SceneFader sceneFader;
-    string levelToLoad = "CharacterSelect";
+    SceneFader _sceneFader;
+    string _levelToLoad = "CharacterSelect";
+    Button _playButton, _quitButton;
 
-    public void Play()
+    void Start()
     {
-        sceneFader.FadeTo(levelToLoad);
+        _sceneFader = FindObjectOfType<SceneFader>();
+        
+        _playButton = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<Button>();
+        _quitButton = GameObject.FindGameObjectWithTag("QuitButton").GetComponent<Button>();
+
+        _playButton.onClick.AddListener(Play);
+        _quitButton.onClick.AddListener(Quit);
     }
 
-    public void Quit()
+    void Play()
+    {
+        _sceneFader.FadeTo(_levelToLoad);
+    }
+
+    void Quit()
     {
         Debug.Log("Exciting");
         Application.Quit();
-    }
-
-    public void Restart()
-    {
-        sceneFader.FadeTo(levelToLoad);
     }
 }

@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    GameManager gameManager;
+
+    CompleteLevel _completeLevel;
     Enemy[] _enemies;
 
-    void Start() 
+    void Start()
     {
-        gameManager = GetComponent<GameManager>();
+       _completeLevel = FindObjectOfType<CompleteLevel>();
     }
+
     void OnEnable()
     {
         _enemies = FindObjectsOfType<Enemy>();
@@ -21,7 +23,7 @@ public class LevelController : MonoBehaviour
     {
         if (EnemiesAreAllDead())
         {
-            gameManager.WinLevel();
+            _completeLevel.WinLevel();
         }
     }
 
@@ -39,6 +41,6 @@ public class LevelController : MonoBehaviour
 
     }
 
-
+    
 
 }

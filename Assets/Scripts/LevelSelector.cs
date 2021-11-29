@@ -2,24 +2,26 @@ using UnityEngine;
 using UnityEngine.UI;
 public class LevelSelector : MonoBehaviour
 {
-    public SceneFader sceneFader;
+    SceneFader _sceneFader;
     public Button[] levelButtons;
 
     void Start()
     {
+        _sceneFader = FindObjectOfType<SceneFader>();
+
         int levelReached = PlayerPrefs.GetInt("levelReached", 1);
 
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            if(i > levelReached)
+            if (i > levelReached)
             {
-            levelButtons[i].interactable = false;
+                levelButtons[i].interactable = false;
             }
         }
     }
 
     public void Select(string levelName)
     {
-        sceneFader.FadeTo(levelName);
+        _sceneFader.FadeTo(levelName);
     }
 }

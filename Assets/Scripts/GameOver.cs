@@ -1,18 +1,47 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public SceneFader sceneFader;
-    public string mainMenu = "MainMenu";
+    GameObject _gameOverOverlay;
+    SceneFader _sceneFader;
+    Button _retryButton, _menuButton;
+    bool _lossLevel = false;
+    string _mainMenu = "MainMenu";
 
-    public void Retry()
+    void Awake()
     {
-        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+        _sceneFader = FindObjectOfType<SceneFader>();
+
+        _gameOverOverlay = GameObject.FindGameObjectWithTag("GameOverOverlay");
+
+        _retryButton = GameObject.FindGameObjectWithTag("GORetryButton").GetComponent<Button>();
+        _menuButton = GameObject.FindGameObjectWithTag("GOMenuButton").GetComponent<Button>();
+    }
+    void Start()
+    {
+        _gameOverOverlay.SetActive(false);
+
+        _retryButton.onClick.AddListener(Retry);
+        _menuButton.onClick.AddListener(Menu);
     }
 
-    public void Menu()
+    void Retry()
     {
-        sceneFader.FadeTo(mainMenu);
+        _sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
+
+    void Menu()
+    {
+        _sceneFader.FadeTo(_mainMenu);
+    }
+
+    public void EndGame()
+    {
+        _gameOverOverlay.SetActive(true);
+        _lossLevel = true;
+    }
+
+
 }
