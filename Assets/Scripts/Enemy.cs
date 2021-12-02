@@ -5,13 +5,11 @@ public class Enemy : MonoBehaviour
 
     // [SerializeField] ParticleSystem _particleSystem;
     // [SerializeField] Sprite _deadEnemy;
-    // ScoreController scoreController;
-    // public int pointValue;
     bool _hasDied;
 
     void Start()
     {
-        // scoreController = FindObjectOfType<ScoreController>();
+        
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -55,7 +53,6 @@ public class Enemy : MonoBehaviour
         IEnumerator Die()
         {
             _hasDied = true;
-            // scoreController.ScoreCounter();
             // GetComponent<SpriteRenderer>().sprite = _deadEnemy;
             // _particleSystem.Play();
             yield return new WaitForSeconds(1);

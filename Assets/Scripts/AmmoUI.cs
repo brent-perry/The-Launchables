@@ -12,6 +12,6 @@ public class AmmoUI : MonoBehaviour
 
     void Update()
     {
-        _ammoText.text = $"Ammo: {AmmoController.Ammo}";
+        _ammoText.text = $"Ammo {AmmoController.Ammo}";
     }
 }

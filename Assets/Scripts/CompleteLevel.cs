@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class CompleteLevel : MonoBehaviour
 {
-    GameObject _completedLevelOverlay;
+    GameObject _completedLevelOverlay, _playerGUI;
     SceneFader _sceneFader;
     Button _retryButton, _menuButton, _continueButton;
     string _mainMenu = "MainMenu";
@@ -16,6 +16,7 @@ public class CompleteLevel : MonoBehaviour
     {
         _sceneFader = FindObjectOfType<SceneFader>();
 
+        _playerGUI = GameObject.FindGameObjectWithTag("PlayerGameOverlay");
         _completedLevelOverlay = GameObject.FindGameObjectWithTag("CompletedLevelOverlay");
 
         _retryButton = _retryButton = GameObject.FindGameObjectWithTag("CLRetryButton").GetComponent<Button>();
@@ -26,6 +27,7 @@ public class CompleteLevel : MonoBehaviour
     void Start()
     {
         _completedLevelOverlay.SetActive(false);
+        _playerGUI.SetActive(true);
 
         _retryButton.onClick.AddListener(Retry);
         _menuButton.onClick.AddListener(Menu);
@@ -52,5 +54,6 @@ public class CompleteLevel : MonoBehaviour
     {
         _wonLevel = true;
         _completedLevelOverlay.SetActive(true);
+        _playerGUI.SetActive(false);
     }
 }

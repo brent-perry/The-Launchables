@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    GameObject _gameOverOverlay;
+    GameObject _gameOverOverlay, _playerGUI;
     SceneFader _sceneFader;
     Button _retryButton, _menuButton;
     bool _lossLevel = false;
@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour
     {
         _sceneFader = FindObjectOfType<SceneFader>();
 
+        _playerGUI = GameObject.FindGameObjectWithTag("PlayerGameOverlay");
         _gameOverOverlay = GameObject.FindGameObjectWithTag("GameOverOverlay");
 
         _retryButton = GameObject.FindGameObjectWithTag("GORetryButton").GetComponent<Button>();
@@ -21,6 +22,7 @@ public class GameOver : MonoBehaviour
     }
     void Start()
     {
+        _playerGUI.SetActive(true);
         _gameOverOverlay.SetActive(false);
 
         _retryButton.onClick.AddListener(Retry);
@@ -40,6 +42,7 @@ public class GameOver : MonoBehaviour
     public void EndGame()
     {
         _gameOverOverlay.SetActive(true);
+        _playerGUI.SetActive(false);
         _lossLevel = true;
     }
 
