@@ -6,7 +6,6 @@ public class LoadCharacter : MonoBehaviour
 {
     public GameObject[] characterPrefabs;
     public Transform spawnPoint;
-    public GameObject characterClone;
     GameObject _selectedCharacterPrefab;
 
 
@@ -14,6 +13,6 @@ public class LoadCharacter : MonoBehaviour
     {
         int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
         _selectedCharacterPrefab = characterPrefabs[selectedCharacter];
-        characterClone = Instantiate(_selectedCharacterPrefab, spawnPoint.position, Quaternion.identity);
+        Instantiate(_selectedCharacterPrefab, spawnPoint.position, Quaternion.identity);
     }
 }

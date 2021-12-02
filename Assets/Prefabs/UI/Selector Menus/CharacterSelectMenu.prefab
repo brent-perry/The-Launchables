@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5806472837714775970}
   - component: {fileID: 5806472837714775968}
   - component: {fileID: 4153914220645429421}
+  - component: {fileID: 8432108855136468469}
   m_Layer: 5
   m_Name: NextButton
-  m_TagString: Untagged
+  m_TagString: NextCharacterButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +192,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &8432108855136468469
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5806472837714776030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4d61283fb0332c4e9c2f9a8a484de5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5806472837975704593
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +223,10 @@ GameObject:
   - component: {fileID: 5806472837975704597}
   - component: {fileID: 5806472837975704595}
   - component: {fileID: 2417526763482499781}
+  - component: {fileID: 5281795222171047972}
   m_Layer: 5
   m_Name: StartButton
-  m_TagString: Untagged
+  m_TagString: SelectCharacterButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,6 +391,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &5281795222171047972
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5806472837975704593}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4d61283fb0332c4e9c2f9a8a484de5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5806472838546135258
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,9 +524,10 @@ GameObject:
   - component: {fileID: 5806472838942318751}
   - component: {fileID: 5806472838942318749}
   - component: {fileID: 6725723348763273418}
+  - component: {fileID: 637559947160408923}
   m_Layer: 5
   m_Name: PreviousButton
-  m_TagString: Untagged
+  m_TagString: PreviousCharacterButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -663,6 +704,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &637559947160408923
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5806472838942318747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4d61283fb0332c4e9c2f9a8a484de5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6457897121219800142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3554757608905519575, guid: d5bb059e809a0c647b58f803e091e81e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 98.8
+      value: 652
       objectReference: {fileID: 0}
     - target: {fileID: 3554757608905519575, guid: d5bb059e809a0c647b58f803e091e81e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -940,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3554757608905519575, guid: d5bb059e809a0c647b58f803e091e81e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -125.1
+      value: -662
       objectReference: {fileID: 0}
     - target: {fileID: 3554757608905519575, guid: d5bb059e809a0c647b58f803e091e81e, type: 3}
       propertyPath: m_AnchoredPosition.y
