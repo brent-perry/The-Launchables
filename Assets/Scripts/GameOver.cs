@@ -7,12 +7,15 @@ public class GameOver : MonoBehaviour
     GameObject _gameOverOverlay, _playerGUI;
     SceneFader _sceneFader;
     Button _retryButton, _menuButton;
+    AudioSource _audioSource;
     bool _lossLevel = false;
     string _mainMenu = "MainMenu";
 
     void Awake()
     {
         _sceneFader = FindObjectOfType<SceneFader>();
+
+        _audioSource = GameObject.FindGameObjectWithTag("MusicController").GetComponent<AudioSource>();
 
         _playerGUI = GameObject.FindGameObjectWithTag("PlayerGameOverlay");
         _gameOverOverlay = GameObject.FindGameObjectWithTag("GameOverOverlay");
@@ -41,6 +44,7 @@ public class GameOver : MonoBehaviour
 
     public void EndGame()
     {
+        _audioSource.Stop();
         _gameOverOverlay.SetActive(true);
         _playerGUI.SetActive(false);
         _lossLevel = true;

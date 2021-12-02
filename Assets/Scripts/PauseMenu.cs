@@ -8,11 +8,14 @@ public class PauseMenu : MonoBehaviour
     string mainMenu = "MainMenu";
     Button _resumeButton, _retryButton, _menuButton;
     GameObject _pauseOverlay;
+    AudioSource _audioSource;
 
     void Awake()
     {
         _sceneFader = FindObjectOfType<SceneFader>();
 
+        _audioSource = GameObject.FindGameObjectWithTag("MusicController").GetComponent<AudioSource>();
+        
         _pauseOverlay = GameObject.FindGameObjectWithTag("PauseOverlay");
 
         _resumeButton = GameObject.FindGameObjectWithTag("PauseResumeButton").GetComponent<Button>();
@@ -44,10 +47,12 @@ public class PauseMenu : MonoBehaviour
         if (_pauseOverlay.activeSelf)
         {
             Time.timeScale = 0f;
+            _audioSource.Pause();
         }
         else
         {
             Time.timeScale = 1f;
+            _audioSource.Play();
         }
     }
 
