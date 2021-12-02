@@ -35,6 +35,7 @@ TagManager:
   - SelectCharacterButton
   - TargetGroup
   - PlayerGameOverlay
+  - MusicController
   layers:
   - Default
   - TransparentFX
