@@ -36,6 +36,9 @@ TagManager:
   - TargetGroup
   - PlayerGameOverlay
   - MusicController
+  - HelpButton
+  - TutorialOverlayCanvas
+  - CloseTutorialButton
   layers:
   - Default
   - TransparentFX

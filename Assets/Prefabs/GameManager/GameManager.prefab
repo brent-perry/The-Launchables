@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6146372597572375253}
   - component: {fileID: 6146372597572375250}
   - component: {fileID: 5412139420282087378}
+  - component: {fileID: -4861294235466825587}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -117,7 +118,6 @@ MonoBehaviour:
   - {fileID: 2040874301012591893, guid: f4dac736def8f1c41a906e71589dc7ed, type: 3}
   - {fileID: 7141499845280546456, guid: 743291a90045b3e479aa472da68f1368, type: 3}
   spawnPoint: {fileID: 6146372597691988418}
-  characterClone: {fileID: 0}
 --- !u!114 &6146372597572375253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +154,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e77f5207d30d543bfb26ebd0f5a630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4861294235466825587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146372597572375248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bcec92f937b914e9ee7cc05d865a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6146372597691988417

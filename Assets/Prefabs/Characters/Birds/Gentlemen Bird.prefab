@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8474902654763103476}
   - component: {fileID: 8474902654763103477}
   - component: {fileID: 8474902654763103474}
-  - component: {fileID: 8474902654763103475}
+  - component: {fileID: 6013608855679588992}
   m_Layer: 0
   m_Name: Gentlemen Bird
   m_TagString: Characters
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _launchPower: 1000
   _maxDragDistance: 4
---- !u!120 &8474902654763103475
+--- !u!120 &6013608855679588992
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
