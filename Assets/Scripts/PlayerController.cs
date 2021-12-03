@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
+        LineRendererAimer();
     }
 
     void OnMouseDown()
