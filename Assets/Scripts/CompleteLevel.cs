@@ -6,14 +6,16 @@ public class CompleteLevel : MonoBehaviour
 {
     GameObject _completedLevelOverlay, _playerGUI;
     SceneFader _sceneFader;
+    BeatGame _beatGame;
     Button _retryButton, _menuButton, _continueButton;
     string _mainMenu = "MainMenu";
     public string nextLevel;
     public int levelToUnlock;
-    bool _wonLevel = false;
+    public bool wonLevel = false;
 
     void Awake()
     {
+        _beatGame = FindObjectOfType<BeatGame>();
         _sceneFader = FindObjectOfType<SceneFader>();
 
         _playerGUI = GameObject.FindGameObjectWithTag("PlayerGameOverlay");
@@ -52,8 +54,15 @@ public class CompleteLevel : MonoBehaviour
 
     public void WinLevel()
     {
-        _wonLevel = true;
-        _completedLevelOverlay.SetActive(true);
+        wonLevel = true;
         _playerGUI.SetActive(false);
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level12"))
+        {
+            _beatGame.beatGameOverlay.SetActive(true);
+        }
+        else
+        {
+            _completedLevelOverlay.SetActive(true);
+        }
     }
 }

@@ -2,24 +2,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    bool lossLevel = false;
-    bool wonLevel = false;
     GameOver _gameOver;
+    CompleteLevel _completeLevel;
     PlayerController _playerController;
 
     void Start()
     {
+        _completeLevel = FindObjectOfType<CompleteLevel>();
         _playerController = FindObjectOfType<PlayerController>();
         _gameOver = FindObjectOfType<GameOver>();
     }
 
     void Update()
     {
-        if (AmmoController.Ammo <= 0 && !wonLevel && _playerController.playerRigidbody2D.position == _playerController.playerStartPosition)
+        if (AmmoController.Ammo <= 0 && !_completeLevel.wonLevel && _playerController.playerRigidbody2D.position == _playerController.playerStartPosition)
         {
             _gameOver.EndGame();
         }
-        if (lossLevel || wonLevel)
+        if (_gameOver.lossLevel || _completeLevel.wonLevel)
         {
             return;
         }

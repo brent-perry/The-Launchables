@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
     SceneFader _sceneFader;
     Button _retryButton, _menuButton;
     AudioSource _audioSource;
-    bool _lossLevel = false;
+    public bool lossLevel = false;
     string _mainMenu = "MainMenu";
 
     void Awake()
@@ -47,7 +47,7 @@ public class GameOver : MonoBehaviour
         _audioSource.Stop();
         _gameOverOverlay.SetActive(true);
         _playerGUI.SetActive(false);
-        _lossLevel = true;
+        lossLevel = true;
     }
 
 
