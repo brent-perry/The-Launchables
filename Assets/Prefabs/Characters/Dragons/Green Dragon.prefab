@@ -363,7 +363,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bceaf90794be9624b9a44956805a6c55, type: 2}
+  - {fileID: 2100000, guid: f56a4c2479f52a14e9b083ac41f2a6be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -475,5 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc3bd847cac12149965230fe9100faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRigidbody2D: {fileID: 0}
+  playerStartPosition: {x: 0, y: 0}
   _launchPower: 1000
   _maxDragDistance: 4
