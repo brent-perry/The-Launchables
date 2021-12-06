@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc3bd847cac12149965230fe9100faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRigidbody2D: {fileID: 0}
+  playerStartPosition: {x: 0, y: 0}
   _launchPower: 1000
   _maxDragDistance: 4
 --- !u!120 &4025129260106301857
@@ -183,7 +185,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0, g: 0, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     AmmoController _ammoController;
-    public Rigidbody2D playerRigidbody2D;
+    GameOver _gameOver;
     SpriteRenderer _spriteRenderer;
     LineRenderer _lineRenderer;
     Vector2 _currentPosition;
+    public Rigidbody2D playerRigidbody2D;
     public Vector2 playerStartPosition;
     [SerializeField] float _launchPower = 1000;
     [SerializeField] float _maxDragDistance = 4f;
-    bool _hasFired;
 
     void Awake()
     {
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        _hasFired = false;
+        _gameOver = FindObjectOfType<GameOver>();
         _ammoController = FindObjectOfType<AmmoController>();
         playerStartPosition = playerRigidbody2D.position;
         playerRigidbody2D.isKinematic = true; //prevents player object from moving
@@ -79,6 +79,11 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         StartCoroutine(ResetAfterDelay());
+        
+        if(other.gameObject.tag =="DeathObstacles")
+        {
+            _gameOver.EndGame();
+        }
     }
 
     void LineRendererAimer()
@@ -89,11 +94,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ResetAfterDelay()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         playerRigidbody2D.position = playerStartPosition;
         playerRigidbody2D.isKinematic = true;
         playerRigidbody2D.velocity = Vector2.zero;
     }
-
-
 }

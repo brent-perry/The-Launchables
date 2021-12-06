@@ -39,6 +39,10 @@ TagManager:
   - HelpButton
   - TutorialOverlayCanvas
   - CloseTutorialButton
+  - Knockable
+  - BeatGameOverlay
+  - BGQuitButton
+  - BGMenuButton
   layers:
   - Default
   - TransparentFX

@@ -310,7 +310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.028808594, y: -0.4000244}
+  m_AnchoredPosition: {x: -5, y: 29}
   m_SizeDelta: {x: -1122.147, y: -582.8618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5430768589336984945
@@ -341,10 +341,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Click(Press) and hold your mouse(finger) on your character and pull them
+  m_text: 'Click(Press) and hold your mouse(finger) on your character and pull them
     to the left and angle the direction you want the character to fly. Destroy all
-    enemies by hitting them with either the character or any of the knockable objects.
-    \nHAVE FUN"
+    enemies by hitting them with either the character or with any of the knockable
+    objects to land on their heads. Avoid spikes at all cost.
+
+    HAVE FUN'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87cb52600bc6ee44b8679e6d806b92e2, type: 2}
   m_sharedMaterial: {fileID: 4263170022645672667, guid: 87cb52600bc6ee44b8679e6d806b92e2, type: 2}
@@ -407,7 +409,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 147.02895, y: 43.816605, z: 133.39728, w: 30.184769}
+  m_margin: {x: 147.02895, y: 43.816605, z: 133.39728, w: -12.319687}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
